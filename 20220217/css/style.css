@@ -1,0 +1,71 @@
+/*リセット*/
+/*利用するタグによってこちらの内容は増やす*/
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #000; /*主に使う色*/
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+/*macやwindowsでフォントが異なるためいくつか候補を入れている 指定方法は検索して確認*/
+a {
+    /*下線を消す aタグの下線を消す*/
+    text-decoration: none;
+    /*色を消す 親要素に準ずる*/
+    color: inherit;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom; /*画像の下の隙間を消す*/
+    border: none;
+}
+
+.pc_nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.pc_nav li {
+    padding: 10px;
+}
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0 auto;
+
+    justify-content: space-between;
+}
+.wrap div {
+    width: 30%;
+    height: 300px;
+    text-align: center;
+    background: #f00;
+    color: #fff;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 499px) {
+    .pc_nav {
+        display: block;
+    }
+}
